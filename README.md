@@ -120,7 +120,7 @@ assert(lkTbl.release(tid, i,j,k));
 <br>
 
 ## Key notion
-### `bool isGrowing`
+#### `bool isGrowing`
 ```
 true - in Growing Phase
 false - in Shrinking Phase
@@ -128,7 +128,7 @@ false - in Shrinking Phase
 
 <br>
 
-### `std::condition_variable cv`  
+#### `std::condition_variable cv`  
 Waiting on *cv  * when  
 i) trying to acquire lock  
 ii) until there are no requested locks  
@@ -139,7 +139,8 @@ ii) no requested locks remained (in Shrinking Phase)
 
 each i) and ii) are corresponded.
 <br>
-### `std::mutex lk` in *LockTable*
+
+#### `std::mutex lk` in *LockTable*
 It works as *global mutex* described in the specification document.
 
 
