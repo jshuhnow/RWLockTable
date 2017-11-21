@@ -6,3 +6,6 @@
 !*/
 # Unignore Makefile
 !Makefile
+
+# Object Folders
+obj/
