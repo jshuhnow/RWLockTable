@@ -16,6 +16,7 @@ Expanding(Growing) phase - locks are acquired and no locks are released
 Shrinking phase - locks are released and no locks are acquired.  
 ```
 <br>
+
 ## Performance
 ### Enviornment
 Intel(R) Core(TM) i5-4460  CPU @ 3.20GHz 
@@ -165,11 +166,11 @@ All methods but *printLinkedList* for debugging returns a boolean value, which w
 
 i) `bool try{Shared, Exclusive}Lock(int tid, int idx)`  
 Both functions shall try locking and it will return false if and only if any deadlocks are detected.  
-<br>
+
 
 ii) `bool release(int tid, int i, int j=-1, int k=-1)`  
 It shall release the locks on i( ,  j, k) and wake up all sleeping threads to give a chance to acquire its pending lock.  
-<br>
+
 
 iii) `bool releaseAndWait(int tid, int i, int j=-1, int k=-1)`  
 It will be called as any deadlocks are detected. Hence, it shall release all acquired/pending locks and will be blocked until the other locks are released except for the thread who releases the last one. (We checks by managing *size* of *LockTable*.) That will wake up all the other threads and retry the lock process. (hoping it would be done luckily in a way which would have no deadlocks for every steps)  
