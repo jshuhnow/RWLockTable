@@ -7,5 +7,5 @@
 # Unignore Makefile
 !Makefile
 
-# Object Folders
-obj/
+# Object Files
+*.o
